@@ -1,3 +1,12 @@
+# Repository structure
+
+```bash
+├───Bonus_exercises/ - directory containing bonus exercises to further practice your skills
+├───Class_materials/ - explanations from classes in written form
+├───Exercises_mistakes/ - feedback / most commonly identified mistakes made in submitted codes
+├───README.md - instructions related classes
+```
+
 # Informacie
 
 **Datove typy**:
