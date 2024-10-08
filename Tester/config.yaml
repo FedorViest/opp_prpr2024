@@ -1,0 +1,34 @@
+locations:
+  tests_file: "input.yaml" # Path to the tests file
+  tests_results: "results"  # Folder for storing test results
+  compiled: "compiled"  # Folder for storing compiled files
+  c_files: "files"
+
+
+valgrind:
+  leak_check: "full"
+  show_leak_kinds: "all"
+  track_origins: "yes"
+
+compilers:
+  gcc:
+    compiler_path: ""
+    compiler_exe: "gcc"
+    compiler_args:
+      debug:
+        - "-O0" 
+        - "-g"  
+        - "--pedantic"  
+        - "-Wall"  
+        - "-Werror"  
+        - "-std=c90"  
+        - "-Wno-unused-result"
+      release:
+        - "-O2"
+        - "-s"
+        - "-DNDEBUG"
+        - "--pedantic"  
+        - "-Wall"  
+        - "-Werror"  
+        - "-std=c90"  
+        - "-Wno-unused-result"
