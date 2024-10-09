@@ -39,7 +39,7 @@ sudo apt-get install -y valgrind gcc wget
 print_green "Installed GCC + VALGRIND + WGET"
 
 # Download the tester from GitHub
-URL_TESTER="https://raw.githubusercontent.com/FedorViest/opp_prpr2024/refs/heads/main/Tester/main"
+URL_TESTER="https://raw.githubusercontent.com/FedorViest/opp_prpr2024/refs/heads/main/Tester/dist.tar.gz"
 URL_CONFIG="https://raw.githubusercontent.com/FedorViest/opp_prpr2024/refs/heads/main/Tester/config.yaml"
 URL_TESTYML="https://raw.githubusercontent.com/FedorViest/opp_prpr2024/refs/heads/main/Tester/input.yaml"
 
@@ -58,15 +58,23 @@ for url in $URL_TESTER $URL_CONFIG $URL_TESTYML;do
         fi
 done
 
+
+print_orange "Untar _dist package"
+
+tar xvfz dist.tar.gz --strip-components=1
+
+mv ./main ./tester
+mv ./tester/main ./tester/tester
+
 mv -f ./main ./tester
-sudo chmod +x ./tester
+sudo chmod +x ./tester/tester
 
 # Create directories
-for dir in files compiled results; do
+for dir in ./tester/files ./tester/compiled ./tester/results; do
     if ! mkdir -p $dir; then
         print_orange "Directory $dir already exists ... Skipping ..."
     fi
 done
 
 printf "\n\n"
-print_green "Installation complete. Tester is available to use -> \"./tester\""
+print_green "Installation complete. Tester is available to use."
