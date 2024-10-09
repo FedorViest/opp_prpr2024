@@ -63,10 +63,9 @@ print_orange "Untar _dist package"
 
 tar xvfz dist.tar.gz --strip-components=1
 
-mv ./main ./tester
-mv ./tester/main ./tester/tester
-
 mv -f ./main ./tester
+mv -f ./tester/main ./tester/tester
+
 sudo chmod +x ./tester/tester
 
 # Create directories
