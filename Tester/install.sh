@@ -65,6 +65,10 @@ tar xvfz dist.tar.gz --strip-components=1
 
 mv -f ./main ./tester
 mv -f ./tester/main ./tester/tester
+mv -f ./config.yaml ./tester/config.yaml
+mv -f ./input.yaml ./tester/input.yaml
+
+rm -rf ./dist.tar.gz
 
 sudo chmod +x ./tester/tester
 
