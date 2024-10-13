@@ -123,22 +123,22 @@ The `locations:` section is used to configure the locations of the files, that t
 Required file structure (in case the example config.yaml is used):
 
 tester/
-├── dist (INTERNAL_DO_NOT_CHANGE)/
-│   └── main/
-│       ├── _internal/
-│       └── main/
-├── files/
-│   ├── main.c
-│   └── ** any other .c files ** 
-├── compiled/
-│   └── ** compiled executables **
-├── results/
-│   ├── ** tester logs **
-│   └── ** valgrind logs **
-├── input.yaml
-├── config.yaml
-├── tester (executable)
-└── ** files that are being used by your code - like .txt **
+|-- dist (INTERNAL_DO_NOT_CHANGE)/
+|   `-- main/
+|       |-- _internal/
+|       `-- main/
+|-- files/
+|   |-- main.c
+|   `-- ** any other .c files ** 
+|-- compiled/
+|   `-- ** compiled executables **
+|-- results/
+|   |-- ** tester logs **
+|   `-- ** valgrind logs **
+|-- input.yaml
+|-- config.yaml
+|-- tester (executable)
+`-- ** files that are being used by your code - like .txt **
 
 ## Problems you may encounter
 
