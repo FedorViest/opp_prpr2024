@@ -122,6 +122,7 @@ The `locations:` section is used to configure the locations of the files, that t
 
 Required file structure (in case the example config.yaml is used):
 
+```
 tester/
 |-- dist (INTERNAL_DO_NOT_CHANGE)/
 |   `-- main/
@@ -139,6 +140,7 @@ tester/
 |-- config.yaml
 |-- tester (executable)
 `-- ** files that are being used by your code - like .txt **
+```
 
 ## Problems you may encounter
 
