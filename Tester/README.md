@@ -6,10 +6,26 @@ Tester for FIIT STU - PRPR project
 
 **Disclaimer:** The tester only works on Linux ( MacOS maybe, but not tested), Windows is not supported (But WSL2 is supported)!!!
 
-## Requirements to run the tester from Windows
+## Requirements
+
+### Windows
 
 - WSL2 (Windows Subsystem for Linux) -> https://learn.microsoft.com/en-us/windows/wsl/install
+  - Ubuntu 22.04 (Tested)
+  - Ubuntu 24.04 (Tested)
+  - Debian 12 Bookworm (Tested)
 - Windows Terminal (From Microsoft Store): https://www.microsoft.com/store/productId/9N0DX20HK701?ocid=pdpshare
+
+### Linux
+
+Should run on any newer Linux distro - Not tested!
+
+**Tested:**
+- Ubuntu 22.04
+- Ubuntu 24.04
+- Debian 12 Bookworm
+
+
 
 ## Installation
 
@@ -21,6 +37,13 @@ cd tester
 ```
 
 ## Usage
+
+```bash
+cd ./tester
+./tester
+```
+
+## Files
 
 There are 3 files in the main directory, the `input.yaml` file is the file, that contains the tests, the `config.yaml` file is the file, that contains the configuration for the tester
 
