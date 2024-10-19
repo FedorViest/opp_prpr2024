@@ -1,0 +1,15 @@
+# 0.1.3
+#
+# 19.10.2024
+#
+# - Added program timeout to the config
+# - Added "Segmentation Fault" to the error message when the program crashes
+
+
+
+# 0.1.2
+#
+# 19.10.2024 
+#
+# - Added UNICODE support - removing special characters from the program output
+
