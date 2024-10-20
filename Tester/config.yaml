@@ -1,3 +1,5 @@
+timeout: 5
+
 locations:
   tests_file: "input.yaml" # Path to the tests file
   tests_results: "results"  # Folder for storing test results
