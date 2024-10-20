@@ -32,8 +32,8 @@ printf "\n\n"
 print_orange "Updating Repos via APT and Installing GCC + VALGRIND"
 
 # Install valgrind and gcc
-sudo apt-get update
-sudo apt-get install -y valgrind gcc wget
+
+brew install valgrind gcc wget
 
 
 print_green "Installed GCC + VALGRIND + WGET"
