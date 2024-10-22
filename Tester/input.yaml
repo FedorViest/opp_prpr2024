@@ -1,7 +1,7 @@
 tests:
   - name: "Test 1: h - Unsuccessful file opening"
     points: 0
-    files_availability: false
+    files_available: false
     sequence:
       - in: "h"
       - out: "H: Neotvoreny subor."
