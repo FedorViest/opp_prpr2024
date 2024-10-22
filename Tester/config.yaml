@@ -1,3 +1,4 @@
+# Max wait time for program to finish
 timeout: 5
 
 locations:

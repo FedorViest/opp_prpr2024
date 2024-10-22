@@ -1,15 +1,41 @@
-# 0.1.3
-#
-# 19.10.2024
-#
-# - Added program timeout to the config
-# - Added "Segmentation Fault" to the error message when the program crashes
+------------------------------------------------------------------------------------------------------------------------
 
+Version: 0.2.0
 
+22.10.2024
 
-# 0.1.2
-#
-# 19.10.2024 
-#
-# - Added UNICODE support - removing special characters from the program output
+FIXES:
+- Fixed Exceptions handling when program timeouts or seg faults, now they are logged as errors and tester output is shown
+  without terminating whole tester
+- Fixed old executables not removing
 
+IMPROVEMENTS:
+- Improved logging, added more information, improved tester output visibility
+- When test fails, it shows at which line it exactly failed
+- Add more description when test fails (Stuck in loop, Seg Fault, etc.)
+- New test parameter - "files_availability" (default: true) 
+  - Description:
+    - If files_availability is false, the program's Current Working Directory is changed to "_internal" forcefully,
+      so that tests that tested for File not open errors can be executed
+    - By default, files_availability is set to true, there is no need to specify it in the test config
+      if it is not testing for File not open errors
+
+------------------------------------------------------------------------------------------------------------------------
+
+Version: 0.1.3
+
+19.10.2024
+
+- Added timeout to the config
+- Added "Seg Fault" to the error message
+
+------------------------------------------------------------------------------------------------------------------------
+
+Version: 0.1.2
+
+19.10.2024 
+
+- Added unidecode to decode output of program to remove special characters
+- Fixed the output comparison
+
+------------------------------------------------------------------------------------------------------------------------
