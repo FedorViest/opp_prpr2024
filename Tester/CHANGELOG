@@ -1,41 +1,57 @@
-------------------------------------------------------------------------------------------------------------------------
+# 0.2.5
+#
+# 05.11.2024
+#
+# FIXES:
+# - Fixed UTF-8 decoding error when Compiling
+# - More error handling - YAML files
+# - Valgrind was overwriting files after each test, now it is fixed
+#
+# IMPROVEMENTS:
+# - Improved logging, added more information, improved tester output visibility
+# - Valgrind logs are now unified and more visible
+# - Tests now continue even when Program Output is not correct with expected output
+# - Added new logging (level WARNING) when expected output is not found in program output with comparison
+# - Added more visibility after all tests ran - Summary of points achieved
+# - Added trace logs for each test - INPUTs and OUTPUTs are now visible in <exe_name>_trace.log
 
-Version: 0.2.0
 
-22.10.2024
 
-FIXES:
-- Fixed Exceptions handling when program timeouts or seg faults, now they are logged as errors and tester output is shown
-  without terminating whole tester
-- Fixed old executables not removing
+# 0.2.0
+#
+# 22.10.2024
+#
+# FIXES:
+# - Fixed Exceptions handling when program timeouts or seg faults, now they are logged as errors and tester output is shown
+#   without terminating whole tester
+# - Fixed old executables not removing
+#
+# IMPROVEMENTS:
+# - Improved logging, added more information, improved tester output visibility
+# - When test fails, it shows for what line it exactly failed
+# - Add more description when test fails
+# - New test parameter - "files_availability" (default: true) 
+#   - Description:
+#     - If files_availability is false, the program's Current Working Directory is changed to "_internal" forcefully,
+#       so that tests that tested for File not open errors can be executed
+#     - By default, files_availability is set to true, there is no need to specify it in the test config
+#       if it is not testing for File not open errors
 
-IMPROVEMENTS:
-- Improved logging, added more information, improved tester output visibility
-- When test fails, it shows at which line it exactly failed
-- Add more description when test fails (Stuck in loop, Seg Fault, etc.)
-- New test parameter - "files_available" (default: true) 
-  - Description:
-    - If "files_available" is "false", the program's Current Working Directory is changed to "_internal" forcefully,
-      so that tests that tested for File not open errors can be executed
-    - By default, "files_available" is set to "true", there is no need to specify it in the test config
-      if it is not testing for File not open errors
 
-------------------------------------------------------------------------------------------------------------------------
 
-Version: 0.1.3
+# 0.1.3
+#
+# 19.10.2024
+#
+# - Added timeout to the config
+# - Added "Seg Fault" to the error message
 
-19.10.2024
 
-- Added timeout to the config
-- Added "Seg Fault" to the error message
 
-------------------------------------------------------------------------------------------------------------------------
+# 0.1.2
+#
+# 19.10.2024 
+#
+# - Added unidecode to decode output of program to remove special characters
+# - Fixed the output comparison
 
-Version: 0.1.2
-
-19.10.2024 
-
-- Added unidecode to decode output of program to remove special characters
-- Fixed the output comparison
-
-------------------------------------------------------------------------------------------------------------------------
