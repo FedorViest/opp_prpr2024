@@ -181,7 +181,6 @@ tests:
       - in: "s"
       - in: "ID152a"
       - out: "S: Vymazalo sa : 1 zaznamov !"
-      - out: ""
       - in: "v 3"
       - out: "ID. mer. modulu: ID164b"
       - out: "Hodnota 1: 0"
